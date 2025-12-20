@@ -7,7 +7,7 @@ It is widely used for building reliable, scalable, and high-performance applicat
 
 ## What is DBMS vs RDBMS?
 
-- **DBMS**: Database Management System  
+- **DBMS**: Database Management System
 - **RDBMS**: Relational Database Management System (data stored in tables with relationships)
 
 PostgreSQL is an **RDBMS** that strictly follows relational principles.
@@ -16,28 +16,27 @@ PostgreSQL is an **RDBMS** that strictly follows relational principles.
 
 ## Why Use PostgreSQL?
 
-- Open source and community driven  
-- ACID compliant (reliable transactions)  
-- Advanced data types (JSON, UUID, Arrays, etc.)  
-- High scalability and performance  
-- Powerful indexing and query optimization  
+- Open source and community driven
+- ACID compliant (reliable transactions)
+- Advanced data types (JSON, UUID, Arrays, etc.)
+- High scalability and performance
+- Powerful indexing and query optimization
 - Modern and production-ready
 
 ---
 
 ## Basic PostgreSQL (psql) Commands
 
-| Command           | Description |
-|-------------------|--------------|
-| `\l`              | List all databases |
-| `\conninfo`       | Show current database connection info |
-| `\dt`             | Show all tables in the current database |
-| `\!cls`           | Clear terminal (Windows) |
-| `\!clear`         | Clear terminal (Linux/macOS) |
-
-
+| Command     | Description                             |
+| ----------- | --------------------------------------- |
+| `\l`        | List all databases                      |
+| `\conninfo` | Show current database connection info   |
+| `\dt`       | Show all tables in the current database |
+| `\!cls`     | Clear terminal (Windows)                |
+| `\!clear`   | Clear terminal (Linux/macOS)            |
 
 ### Create Table Example
+
 ```sql
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -146,3 +145,56 @@ Used when you need globally unique IDs.
 No collision risk across systems
 Better for distributed applications
 More secure than incremental IDs
+
+
+
+## Crud operation with databse
+* CREATE DATABASE COMMAND
+-----------------------------------------------
+create database databaseNameHere
+create database school
+=> here a database will create with name of school
+
+
+*delete database command
+-----------------------------------------------
+delete database databaseNameHere
+delete database school
+=>here school database will be delated
+
+
+*create table
+CREATE TABLE table_name_here (
+COLUMN1 datatype constraint
+COLUMN2 datatype constraint
+COLUMN3 datatype constraint
+)
+
+example: 
+create table students (
+  id serial ,
+  name char(50),
+  age int ,
+  isactive boolean
+)
+
+
+*Delete table 
+----------------------------------
+drop table tableNameHere 
+drop table students
+=>Here student table will be deleted 
+
+Another way of drop table 
+----------------------------------
+drop table if exists tableNameHere
+drop table if exists Students
+=>here if student table exist than that will be deleted 
+
+
+
+
+
+
+
+```
